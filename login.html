@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style>
+		.background-image {
+			background-image: url("photo-1530533718754-001d2668365a.jpg");
+			background-size: cover;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.logo-container {
+			width: 30%;
+			margin-right: 1rem;
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.logo-container img {
+			height: 5rem;
+			width: auto;
+		}
+
+		.login-container {
+			width: 30%;
+			background-color: rgba(255, 255, 255, 0.5);
+			padding: 2rem;
+			border-radius: 1rem;
+			box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+		}
+
+		.login-container h1 {
+			font-size: 2rem;
+			margin-bottom: 1rem;
+		}
+
+		.login-container label {
+			display: block;
+			margin-bottom: 0.5rem;
+		}
+
+		.login-container input[type="email"],
+		.login-container input[type="password"] {
+			display: block;
+			padding: 0.5rem;
+			border: none;
+			border-radius: 0.5rem;
+			margin-bottom: 1rem;
+			width: 100%;
+		}
+
+		.login-container input[type="submit"] {
+			display: block;
+			background-color: #3366cc;
+			color: #fff;
+			border: none;
+			border-radius: 0.5rem;
+			padding: 0.5rem 1rem;
+			cursor: pointer;
+			margin-top: 1rem;
+			margin-left: auto;
+			margin-right: auto;
+		}
+        .h12{
+            font-family:monospace;
+        }
+	</style>
+</head>
+<body>
+	<div class="background-image">
+		<div class="container">
+			<div class="logo-container">
+				<img src="2-removebg-preview.png" alt="Logo">
+			</div>
+			<div class="login-container">
+				<h1 class="h12">Login</h1>
+				<form>
+					<label for="username">Email</label>
+					<input type="text" id="username" name="username" required>
+
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password" required>
+
+					<input type="submit" value="Submit">
+				</form>
+                <script>
+                    const form = document.querySelector('form');
+                    form.addEventListener('submit', (event) => {
+                      event.preventDefault();
+                      const username = document.querySelector('#username').value;
+                      const password = document.querySelector('#password').value;
+                      const role = validateLogin(username, password);
+                      if (role) {
+                        alert(`Welcome ${role}!`);
+                        // Redirect to dashboard or home page
+                      } else {
+                        alert('Invalid username or password.');
+                        // Clear form fields and display error message
+                      }
+                    });
+                  </script>
+			</div>
+		</div>
+	</div>
+     
+</body>
+</html>

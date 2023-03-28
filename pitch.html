@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Startup Application Form</h1>
+	<form action="submit-startup.php" method="post" enctype="multipart/form-data">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name"><br>
+
+		<label for="education">Highest level of education:</label>
+		<input type="text" id="education" name="education"><br>
+
+		<label for="professional-experience">Years of professional experience:</label>
+		<input type="number" id="professional-experience" name="professional-experience"><br>
+
+		<label for="startup-experience">Years of startup experience:</label>
+		<input type="number" id="startup-experience" name="startup-experience"><br>
+
+		<label for="idea-state">State of your idea:</label>
+		<input type="text" id="idea-state" name="idea-state"><br>
+
+		<label for="team-size">Team/company size:</label>
+		<select id="team-size" name="team-size">
+			<option value="1-5">1-5</option>
+			<option value="6-10">6-10</option>
+			<option value="11-20">11-20</option>
+			<option value="20+">20+</option>
+		</select><br>
+
+		<label for="startup-description">Describe your startup in 100 words:</label>
+		<textarea id="startup-description" name="startup-description" rows="4" cols="50"></textarea><br>
+
+		<label for="pitch-deck">Upload pitch deck:</label>
+		<input type="file" id="pitch-deck" name="pitch-deck"><br>
+
+		<label for="looking-for">What are you looking for?</label>
+		<input type="text" id="looking-for" name="looking-for"><br>
+
+		<input type="submit" value="Submit">
+	</form>
+
+	<button id="upload-pitch-to-ai">Upload pitch to the AI</button>
+</body>
+</html>

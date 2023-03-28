@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "openai": "^3.2.1",
+    "python-shell": "^5.0.0"
+  }
+}
